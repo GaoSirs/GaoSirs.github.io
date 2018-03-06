@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>高健军的个人简历</title>
-	<link rel="shortcut icon" href="images/fav.ico"></head>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="shortcut icon" href="images/fav.ico" />
+	<!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/index.css" />
 
     <!--[if lt IE 9]>
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -19,64 +19,78 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-		    <div class="container-fluid">
-			    <div class="navbar-header">
-			        <button type="button" class="navbar-toggle" data-toggle="collapse"
-			                data-target="#navbar-collapse">
-			            <span class="sr-only">切换导航</span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			        </button>
-			        <a class="navbar-brand" href="#">Resume</a>
-			    </div>
-			    <div class="collapse navbar-collapse" id="navbar-collapse">
-			        <ul class="nav navbar-nav navbar-right">
-			            <li class="active"><a href="#">iOS</a></li>
-			            <li><a href="#">SVN</a></li>
-			            <li><a href="#">SVN</a></li>
-			            <li><a href="#">SVN</a></li>
-			            <li><a href="#">SVN</a></li>
-			        </ul>
-			    </div>
+	<header>
+		<div class="common_width">
+			<div class="header_left fl">
+				<h1>Resume</h1>
 			</div>
-	    </div>
-	</nav>
+			<div class="header_right fr">
+				<ul class="nav">
+					<li class="nav_item aitive">
+						首页
+						<span></span>
+					</li>
+					<li class="nav_item">
+						 基本资料
+						<span></span>
+					</li>
+					<li class="nav_item">
+						 项目经验 
+						<span></span>
+					</li>
+					<li class="nav_item">
+						 专业技能
+						<span></span>
+					</li>
+					<li class="nav_item">
+						 自我评价
+						<span></span>
+					</li>
+					<li class="nav_item">
+						 联系方式
+						<span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
 	<div class="swiper-container">
-	  <div class="swiper-wrapper">
-	    <div class="swiper-slide slide_F1" id="index_F1">slider1</div>
-	    <div class="swiper-slide slide_F2" id="index_F2">slider2</div>
-	    <div class="swiper-slide slide_F3" id="index_F3">slider3</div>
-	    <div class="swiper-slide slide_F4" id="index_F4">slider4</div>
-	    <div class="swiper-slide slide_F5" id="index_F5">slider5</div>
+	  <div class="swiper-wrapper swiper-no-swiping">
+	    <div class="swiper-slide slide_F1" id="index_F1">
+	    	<div class="introduce">
+	    		<div class="Header_Img">
+	    			<img src="images/Me.jpg" alt="">
+	    		</div>
+	    		<h2>高健军<span class="brand-heading">-前端工程师</span></h2>
+	    		<p class="intro-text">喜欢技术，热爱挑战</p>
+	    	</div>
+	    	
+	    </div>
+	    <div class="swiper-slide slide_F2" id="index_F2">基本资料</div>
+	    <div class="swiper-slide slide_F3" id="index_F3">项目经验</div>
+	    <div class="swiper-slide slide_F4" id="index_F4">专业技能</div>
+	    <div class="swiper-slide slide_F5" id="index_F5">工作经历</div>
+	    <div class="swiper-slide slide_F6" id="index_F6">自我评价</div>
+	    <div class="swiper-slide slide_F7" id="index_F7">联系方式</div>
 	  </div>
 	  <div class="swiper-pagination"></div>
 	</div>
 
 
 
+
+
+
+
+
 	<script src="js/jquery-3.2.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/swiper-3.4.2.min.js"></script>
     <script src="js/swiper.animate1.0.2.min.js"></script>
     <script src="js/index.js"></script>
 
     <script>
     	
- 
-		
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        direction: 'vertical',
-        slidesPerView: 1,
-        paginationClickable: true,
-        mousewheelControl: true,
-        speed:1000,
-    });
-    
-
 
     </script>
 </body>

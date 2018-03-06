@@ -1,17 +1,121 @@
 @charset 'utf-8';
+*{
+	margin:0;
+	padding: 0;
+}
 html,
 body {
     position: relative;
     height: 100%;
+    font-family: "微软雅黑","HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.active{
+	color: #04d194!important;
 }
 
-body {
-    background: #eee;
-    color: #000;
-    margin: 0;
-    padding: 0;
+.swiper-pagination{
+	width: 28px;
+	text-align: center;
+	right: 20px!important;
+}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{
+	width: 4px;
+	height: 4px;
+	margin:0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background: #FFF;
+	opacity: 1;
+
+	transition: all 0.1s ease-in-out;
+}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet:hover{
+	width: 8px;
+	height: 8px;
+}
+.swiper-pagination-bullet-active{
+	background: #fff!important;
+	width: 10px!important;
+	height: 10px!important;
+}
+header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9;
+	width: 100%;
+	height: 60px;
+	background-color: transparent;
+}
+.common_width{
+	width:1200px ;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.header_left{
+	
+}
+.header_left h1{
+	color: #FFF;
+	font-size: 18px;
+	line-height: 60px;
+}
+.header_right{
+	
+}
+.nav{
+	overflow: hidden;
+	margin-top: 12px;
+}
+.nav_item{
+	float: left;
+    margin: 0 10px 0 0;
+    font-size: 16px;
+    margin-left: 25px;
+    position: relative;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #FFF;
+	font-size: 16px;
+	transition:color 1s;
+	-moz-transition:color 1s; /* Firefox 4 */
+	-webkit-transition:color 1s; /* Safari and Chrome */
+	-o-transition:color 1s; /* Opera */
+}
+.nav_item a{
+	
+}
+.nav_item span{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	width: 0;
+	height: 1px;
+	background-color: #04d194;
+	transition:width 0.5s;
+}
+.nav_item:hover{
+	color: #04d194;
 }
 
+
+.header_Bar{
+	height: 60px;
+	background-color: transparent;
+}
 .swiper-container {
     height: 100%;
 }
@@ -36,9 +140,40 @@ body {
 }
 
 .slide_F1 {
-    background: #1C97E2FF;
+    background: url('../images/1.jpg') no-repeat center ;
 }
-
+.introduce{
+	
+}
+.Header_Img{
+	width: 100px;
+	height: 100px;
+	border:1px solid #04d194;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.Header_Img img{
+	width: 100%;
+	border-radius: 50%;
+}
+.introduce h2{
+	font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #FFF;
+}
+.brand-heading{
+	color: #F4D03F;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+.intro-text{
+	font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+    color: #FFF;
+}
 .slide_F2 {
     background: #42a4ff;
 }
