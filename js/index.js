@@ -61,8 +61,11 @@ $(function(){
 				$('header').css({'color':'#FFF','background':'transparent','border-bottom':'0'})
 				$('.nav_item').css({'color':'#FFF'})
 			}
-			mySwiper.slideTo(index, 1000, false);//切换到第一个slide，速度为1秒
+			mySwiper.slideTo(index, 1000, false);
 		})
+
+
+		// 分頁條
 		$('.swiper-pagination-bullet').on('click',function(){
 			var index = $(this).index()
 			$('.nav_item').eq(index).addClass('active').siblings().removeClass('active');
