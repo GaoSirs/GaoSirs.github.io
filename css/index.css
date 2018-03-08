@@ -24,7 +24,25 @@ a{
 .active{
 	color: #04d194!important;
 }
-
+.loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/*background-color: #5e4674;*/
+	/*background-color: #66ceff;*/
+	background-color: #fff;
+	z-index: 999;
+}
+.loading img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
 .swiper-pagination{
 	width: 28px;
 	text-align: center;
