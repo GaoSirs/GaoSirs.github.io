@@ -24,7 +24,7 @@
 			<div class="header_left fl">
 				<h1>Resume</h1>
 			</div>
-			<div class="header_right fr">
+			<div class="header_right fr"> 
 				<ul class="nav">
 					<li class="nav_item active">
 						首页
@@ -83,7 +83,7 @@
 
 	<!-- loading -->
 	<div class="loading">
-		<img src="images/loading7.gif" alt="">
+		<img src="images/Loading/loading5.gif" alt="">
 	</div>
 
 
@@ -99,7 +99,10 @@
 
     <script>
     	$(function(){
-    		$('.loading').fadeOut();
+    		 // $('.loading').fadeOut(100);
+    		var timer = setTimeout(function() {
+                $('.loading').fadeOut(1000);
+            }, 2000)
     	})
     </script>
 </body>

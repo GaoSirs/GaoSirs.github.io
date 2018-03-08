@@ -8,6 +8,13 @@ body {
     position: relative;
     height: 100%;
     font-family: "微软雅黑","HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial","sans-serif";
+    moz-user-select: -moz-none; 
+	-moz-user-select: none; 
+	-o-user-select:none; 
+	-khtml-user-select:none; 
+	-webkit-user-select:none; 
+	-ms-user-select:none; 
+	user-select:none;
 }
 ul,li{
 	list-style: none;
@@ -30,9 +37,8 @@ a{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	/*background-color: #5e4674;*/
-	/*background-color: #66ceff;*/
-	background-color: #fff;
+	background-color: #85b0a6;
+	/*background-color: #2b2c30; */
 	z-index: 999;
 }
 .loading img{
@@ -93,6 +99,7 @@ header{
 .header_left h1{
 	font-size: 18px;
 	line-height: 60px;
+	cursor: pointer;
 }
 .header_right{
 	
@@ -182,6 +189,7 @@ header{
     font-weight: 700;
     letter-spacing: -2px;
     color: #FFF;
+    margin:5px 0;
 }
 .brand-heading{
 	color: #F4D03F;
@@ -209,4 +217,11 @@ header{
 
 .slide_F5 {
     background: #E6182CFF;
+}
+.slide_F6 {
+    background: #42a4ff;
+}
+
+.slide_F7 {
+    background: #008080;
 }
