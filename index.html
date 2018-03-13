@@ -62,21 +62,58 @@
 	<div class="swiper-container">
 	  <div class="swiper-wrapper swiper-no-swiping">
 	    <div class="swiper-slide slide_F1" id="index_F1">
+	    	<canvas id="canvas3" style="position:absolute;width:100%;height:100%;"></canvas>
 	    	<div class="introduce">
-	    		<div class="Header_Img">
+	    		<div class="Header_Img ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
 	    			<img src="images/Me.jpg" alt="">
 	    		</div>
-	    		<h2>高健军<span class="brand-heading">-前端工程师</span></h2>
-	    		<p class="intro-text">喜欢技术，热爱挑战</p>
+	    		<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+		    		<h2>高健军<span class="brand-heading">-前端工程师</span></h2>
+		    		<p class="intro-text">怀揣计算机天才梦的帅气少年超级小白 <br/> 喜欢技术，热爱挑战</p>
+	    		</div>
 	    	</div>
 	    	
 	    </div>
-	    <div class="swiper-slide slide_F2" id="index_F2">基本资料</div>
+	    <div class="swiper-slide slide_F2" id="index_F2">
+	    	<div class="F2_wrapper">
+		    	<ul class="F2_Navitem">
+		    		<li class="F2_list">
+		    			<p>
+		    				<i>1</i>
+		    			</p>
+		    			<p>年龄/24岁</p>
+		    		</li>
+		    		<li class="F2_list">
+		    			<p>
+		    				<i>2</i>
+		    			</p>
+		    			<p>学历/本科</p>
+		    		</li>
+		    		<li class="F2_list">
+		    			<p>
+		    				<i>3</i>
+		    			</p>
+		    			<p>坐标/深圳</p></li>
+		    		<li class="F2_list">
+		    			<p>
+		    				<i>4</i>
+		    			</p>
+		    			<p>状态/离职</p>
+		    		</li>
+		    	</ul>
+		    	<div class="F2_Describe">
+		    		<p>2年全职前端开发经验</p>
+		    		<p>熟悉MVC开发,深谙模块化开发之道</p>
+		    		<p>强烈的自我驱动力,代码强迫症患者</p>
+		    		<p>高效的自学能力,具备独立分析解决问题能力</p>
+		    	</div>
+	    	</div>
+	    </div>
 	    <div class="swiper-slide slide_F3" id="index_F3">专业技能</div>
 	    <div class="swiper-slide slide_F4" id="index_F4">项目经验</div>
 	    <div class="swiper-slide slide_F5" id="index_F5">工作经历</div>
-	    <div class="swiper-slide slide_F6" id="index_F6">自我评价</div>
-	    <div class="swiper-slide slide_F7" id="index_F7">联系方式</div>
+	    <div class="swiper-slide slide_F6" id="index_F6">自我评价 <br/>人生就是一道坡，只有不懈攀登，才能到达顶坡，实现自我的最高价值！</div>
+	    <div class="swiper-slide slide_F7" id="index_F7">联系方式<br/>生活是一种绵延不绝的渴望，渴望不断上升，变得更伟大而高贵。</div>
 	  </div>
 	  <div class="swiper-pagination"></div>
 	</div>
@@ -99,10 +136,9 @@
 
     <script>
     	$(function(){
-    		 // $('.loading').fadeOut(100);
     		var timer = setTimeout(function() {
                 $('.loading').fadeOut(1000);
-            }, 2000)
+            }, 1500)
     	})
     </script>
 </body>
