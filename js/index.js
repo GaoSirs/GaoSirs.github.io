@@ -48,7 +48,7 @@ $(function() {
                 } else {
                     $('header').css({ 'color': '#FFF', 'background': 'transparent', 'border-bottom': '0' })
                     $('.nav_item').css({ 'color': '#FFF' })
-                    $('.swiper-pagination-bullet,.swiper-pagination-bullet-active').css({'background':'#FFF'});
+                    // $('.swiper-pagination-bullet,.swiper-pagination-bullet-active').css({'background':'#FFF'});
                 }
                 $('.nav_item').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
             },
@@ -76,9 +76,9 @@ $(function() {
         };
 
         var dots = {
-            nb: 150,
-            distance: 50,
-            d_radius: 150,
+            nb: 250,
+            distance: 150,
+            d_radius: 50,
             array: []
         };
 
@@ -212,10 +212,10 @@ $(function() {
     function Events() {
         // 导航
         $('.header_left h1').on('click',function(){
-        	mySwiper.slideTo(0, 1000, false);
-        	$('header').css({ 'color': '#FFF', 'background': 'transparent', 'border-bottom': '0' })
+        	mySwiper.slideTo(0, 1000, true);
+        	/*$('header').css({ 'color': '#FFF', 'background': 'transparent', 'border-bottom': '0' })
         	$('.nav_item').eq(0).addClass('active').siblings().removeClass('active');
-            $('.nav_item').css({ 'color': '#FFF' })
+            $('.nav_item').css({ 'color': '#FFF' })*/
         })
         $('.nav_item').hover(function() {
             $(this).find('span').css('width', '100%');
@@ -226,15 +226,15 @@ $(function() {
         $('.nav_item').click(function() {
             $(this).addClass('active').siblings().removeClass('active');
             var index = $(this).index();
-            if (index != 0) {
+            /*if (index != 0) {
                 $('header').css({ 'color': '#000', 'background': '#FFF', 'border-bottom': '2px solid #DDD' })
                 $('.nav_item').css({ 'color': '#000' })
 
             } else {
                 $('header').css({ 'color': '#FFF', 'background': 'transparent', 'border-bottom': '0' })
                 $('.nav_item').css({ 'color': '#FFF' })
-            }
-            mySwiper.slideTo(index, 1000, false);
+            }*/
+            mySwiper.slideTo(index, 1000, true);
         })
 
 
