@@ -13,7 +13,7 @@ $(function() {
 
         // DisabledKey(); // 禁止查看源码
         
-        LoadCanvas();
+        LoadCanvas(); // 加载 Canvas
 
         Events(); // 事件函数
 

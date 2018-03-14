@@ -186,23 +186,34 @@ header{
 	width: 100%;
 	border-radius: 50%;
 }
+.decribe_txt{
+	color: #FFF;
+}
+.introduce_p1{
+	height: 50px;
+	line-height: 50px;
+	color: #04d194;
+	padding: 0 60px;
+	border-bottom: 1px solid #FFF;
+}
 .introduce h2{
-	font-size: 40px;
+	font-size: 30px;
     font-weight: 700;
-    letter-spacing: -2px;
-    color: #FFF;
+    letter-spacing: 0px;
+    color: #F4D03F;
     margin:5px 0;
 }
-.brand-heading{
-	color: #F4D03F;
+.introduce_p2{
+	color: #ff6700;
+	font-size: 20px;
     text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: 0px;
 }
-.intro-text{
+.introduce_p3{
 	font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 8px;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
     color: #FFF;
 }
 .slide_F2 {
