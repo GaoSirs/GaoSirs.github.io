@@ -193,8 +193,9 @@ header{
 	height: 50px;
 	line-height: 50px;
 	color: #04d194;
-	padding: 0 60px;
+	padding: 0 100px;
 	border-bottom: 1px solid #FFF;
+	margin-bottom: 30px;
 }
 .introduce h2{
 	font-size: 30px;
@@ -213,8 +214,11 @@ header{
 	font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 8px;
-    /*margin-bottom: 50px;*/
-    color: #FFF;
+    margin: 20px 0;
+    color: #109085;
+}
+.introduce_p4{
+	color: #109085;
 }
 .slide_F2 {
     background: url('../images/1.png') #109085;
@@ -254,9 +258,58 @@ header{
 }
 
 .slide_F3 {
-    background: #008080;
+	background: url('../images/1.png') #FFF ;
+    /*background: #4d5e8f;*/
 }
-
+.F3_wrapper{
+	width: 900px;
+}
+.Skills{
+	
+}
+.Skills_list{
+	float: left;
+    width: 20%;
+    height: auto;
+    padding-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+    overflow: hidden;
+}
+.Skills_list:hover .list_tips{
+	height: 80%;
+	opacity: 1;
+	background-color: rgba(0,0,0,0.8);
+}
+.Skills_list p{
+	
+}
+.Skills_list p img{
+	width: 50%;
+}
+.Skills_list p:nth-child(3){
+	color: #ff6700;
+}
+.list_tips{
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 2;
+    width: 85%;
+    height: 0%;
+    opacity: 0;
+    background-color: rgba(0,0,0,0);
+    color: #FFF;
+    padding: 10px;
+    line-height: 26px;
+    overflow: hidden;
+    font-size: 14px;
+    border-radius: 10px;
+    transition:all 0.5s;
+}
 .slide_F4 {
     background: #62CE30;
 }

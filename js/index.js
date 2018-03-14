@@ -38,22 +38,22 @@ $(function() {
                 if (swiper.activeIndex != 0) {
                     $('header').css({ 'color': '#000', 'background': '#FFF', 'border-bottom': '1px solid #DDD' })
                     $('.nav_item').css({ 'color': '#000' })
-                    /*if(swiper.activeIndex == 1){
+                    if(swiper.activeIndex == 2){
                     	$('.swiper-pagination-bullet').css({'background':'#333'});
                     	$('.swiper-pagination-bullet-active').css({'background':'#333'});
                     }else{
                     	$('.swiper-pagination-bullet').css({'background':'#FFF'});
                     	$('.swiper-pagination-bullet-active').css({'background':'#FFF'});
-                    }*/
+                    }
                 } else {
                     $('header').css({ 'color': '#FFF', 'background': 'transparent', 'border-bottom': '0' })
                     $('.nav_item').css({ 'color': '#FFF' })
-                    // $('.swiper-pagination-bullet,.swiper-pagination-bullet-active').css({'background':'#FFF'});
+                    $('.swiper-pagination-bullet,.swiper-pagination-bullet-active').css({'background':'#FFF'});
                 }
                 $('.nav_item').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
             },
 			onSlideChangeEnd: function(swiper){ 
-				swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+				swiperAnimate(swiper); 
 			} 
         });
     }
@@ -76,8 +76,8 @@ $(function() {
         };
 
         var dots = {
-            nb: 250,
-            distance: 150,
+            nb: 200,
+            distance: 100,
             d_radius: 50,
             array: []
         };
