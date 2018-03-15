@@ -259,7 +259,7 @@ header{
 
 .slide_F3 {
 	background: url('../images/1.png') #FFF ;
-    /*background: #4d5e8f;*/
+    /*background: #945c4c;*/
 }
 .F3_wrapper{
 	width: 900px;
@@ -311,7 +311,7 @@ header{
     transition:all 0.5s;
 }
 .slide_F4 {
-    background:url('../images/1.png') #4d5e8f;
+    background:url('../images/1.png') #945c4c;
 }
 .F4_wrapper{
 	width: 850px;
@@ -359,12 +359,12 @@ header{
 }
 .company_Name{
 	font-size: 20px;
-	color:#4d5e8f ;
+	color:#945c4c ;
 	margin-bottom: 20px;
 }
 .experienceList_right p{
 	font-size: 14px;
-	color:#4d5e8f ;
+	color:#945c4c ;
 	margin-bottom: 12px ;
 }
 .experienceList_right ul li{
@@ -382,7 +382,7 @@ header{
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     border-radius: 50%;
-    background-color: #4d5e8f;
+    background-color: #945c4c;
 }
 .experience_list1{
 	

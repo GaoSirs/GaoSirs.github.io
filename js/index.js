@@ -251,7 +251,7 @@ $(function() {
 
 
         // 分頁條
-        $('.swiper-pagination-bullet').on('click', function() {
+        $('.swiper_pagination .swiper-pagination-bullet').on('click', function() {
             var index = $(this).index()
             $('.nav_item').eq(index).addClass('active').siblings().removeClass('active');
         })
