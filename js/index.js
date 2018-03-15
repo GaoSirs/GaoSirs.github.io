@@ -1,6 +1,7 @@
 $(function() {
 
     var mySwiper;
+    var ExperSwiper;
 
     /**
      * 初始化函数
@@ -24,7 +25,7 @@ $(function() {
      */
     function InitSwiper() {
         mySwiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
+            pagination: '.swiper_pagination',
             direction: 'vertical',
             slidesPerView: 1,
             paginationClickable: true,
@@ -56,6 +57,17 @@ $(function() {
 				swiperAnimate(swiper); 
 			} 
         });
+
+        ExperSwiper = new Swiper('.experience_slider',{
+        	pagination: '.slide_pagination',
+            slidesPerView: 1,
+            paginationClickable: true,
+            speed: 500,
+            effect : 'fade',
+			fade: {
+			  crossFade: false,
+			}
+        })
     }
 
     /**

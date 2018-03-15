@@ -311,7 +311,84 @@ header{
     transition:all 0.5s;
 }
 .slide_F4 {
-    background: #62CE30;
+    background:url('../images/1.png') #4d5e8f;
+}
+.F4_wrapper{
+	width: 850px;
+	min-height:300px; 
+	border-radius: 10px;
+	background: #FFF;
+	/*opacity: 0.5;*/
+	box-shadow: 0 0 25px rgba(0,0,0,.5);
+}
+.slide_pagination{
+	bottom: -30px!important;
+}
+.experience_slider{
+	width: 850px;
+	height: 300px;
+	border-radius: 10px;
+	position: relative;
+}
+.experience_list{
+	display: flex;
+	text-align: left;
+	border-radius: 10px;
+}
+.experienceList_left{
+	width: 160px;
+	text-align: center;
+	position: relative;
+}
+.experienceList_left img{
+	width: 55%;
+}
+.experienceList_right::before{
+	content: '';
+	background: #EEE;
+	width:1px;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top:0;
+}
+.experienceList_right{
+	position: relative;
+	flex:1;
+	padding-left: 20px;
+}
+.company_Name{
+	font-size: 20px;
+	color:#4d5e8f ;
+	margin-bottom: 20px;
+}
+.experienceList_right p{
+	font-size: 14px;
+	color:#4d5e8f ;
+	margin-bottom: 12px ;
+}
+.experienceList_right ul li{
+	line-height: 30px;
+    font-size: 16px;
+    position: relative;
+}
+.experienceList_right ul li:before{
+	content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 5px;
+    height: 5px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #4d5e8f;
+}
+.experience_list1{
+	
+}
+.experience_list2{
+	
 }
 
 .slide_F5 {
