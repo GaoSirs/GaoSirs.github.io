@@ -273,7 +273,9 @@ $(function() {
 	            //屏蔽Shift+F10  
 	        } else if((e.shiftKey) && (e.keyCode == 121)){  
 	            return false;  
-	        }  
+	        } else if((e.ctrlKey) && (e.keyCode == 83)){
+	        	return false;
+	        }
 	    };
 
 	    //屏蔽右键单击  
