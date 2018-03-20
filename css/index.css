@@ -249,6 +249,9 @@ header{
 	margin-bottom: 20px;
 	cursor: pointer;
 }
+.F2_Navitem li p:first-child i{
+	font-size: 40px;	
+}
 .F2_Describe{
 	padding-top: 50px;
 	text-align: center;
@@ -393,7 +396,7 @@ header{
 
 .slide_F5 {
     background:url('../images/1.png') #4b85a0;
-    padding-top: 30px;
+    /*padding-top: 30px;*/
 }
 .F5_wrapper{
 	width: 1100px;
@@ -448,9 +451,66 @@ header{
 	color: #666;
 }
 .slide_F6 {
-    background: #42a4ff;
-}
+    background:url('../images/1.png') #a29971;
 
+}
+.F6_wrapper{
+
+}
+.F6_wrapper h4{
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+.F6_wrapper p{
+	margin-bottom: 15px;
+}
+.F6_wrapper p:nth-child(5){
+	margin-bottom: 30px;
+	color: #d00;
+}
 .slide_F7 {
-    background: #008080;
+    background: url('../images/1.png') #1DC3E1 ;
+    position: relative;
+}
+.F7_wrapper{
+
+}
+.F7_wrapper h4{
+	font-size: 18px;
+	margin-bottom: 40px;
+	line-height: 50px;
+	color: #EBEF0F;
+}
+.Contact_infomation{
+	width: 800px;
+	display: flex;
+}
+.infomation_list{
+	flex:1;
+	color: #FFF;
+	font-size: 16px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition:all 1s;
+}
+.infomation_list:hover{
+	color:#EBEF0F ;
+	opacity: 1;
+}
+.infomation_list p:first-child{
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.infomation_list p:first-child i{
+	font-size: 60px;
+}
+.F7_footer{
+	width: 100%;
+	font-size: 12px;
+	color: #756D4D;
+	border-top: 1px solid #756D4D;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 8px 0;
 }
