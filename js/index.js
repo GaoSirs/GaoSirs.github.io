@@ -12,7 +12,7 @@ $(function() {
 
         InitSwiper();
 
-        // DisabledKey(); // 禁止查看源码
+        DisabledKey(); // 禁止查看源码
         
         LoadCanvas(); // 加载 Canvas
 
@@ -225,9 +225,6 @@ $(function() {
         // 导航
         $('.header_left h1').on('click',function(){
         	mySwiper.slideTo(0, 1000, true);
-        	/*$('header').css({ 'color': '#FFF', 'background': 'transparent', 'border-bottom': '0' })
-        	$('.nav_item').eq(0).addClass('active').siblings().removeClass('active');
-            $('.nav_item').css({ 'color': '#FFF' })*/
         })
         $('.nav_item').hover(function() {
             $(this).find('span').css('width', '100%');
@@ -237,24 +234,32 @@ $(function() {
 
         $('.nav_item').click(function() {
             $(this).addClass('active').siblings().removeClass('active');
-            var index = $(this).index();
-            /*if (index != 0) {
-                $('header').css({ 'color': '#000', 'background': '#FFF', 'border-bottom': '2px solid #DDD' })
-                $('.nav_item').css({ 'color': '#000' })
-
-            } else {
-                $('header').css({ 'color': '#FFF', 'background': 'transparent', 'border-bottom': '0' })
-                $('.nav_item').css({ 'color': '#FFF' })
-            }*/
+            let index = $(this).index();
             mySwiper.slideTo(index, 1000, true);
         })
 
 
         // 分頁條
         $('.swiper_pagination .swiper-pagination-bullet').on('click', function() {
-            var index = $(this).index()
+            let index = $(this).index()
             $('.nav_item').eq(index).addClass('active').siblings().removeClass('active');
         })
+
+        // 音乐
+        $('.Music_Switch').on('click',function(){
+			let IsPause = $('#Music').attr('isPause');
+			let Music = document.getElementById('Music');
+			if(IsPause == 0){
+				Music.pause();
+				$('#Music').attr('isPause',1)
+				$('.Music_Switch span').removeClass('running').addClass('pause');
+			}else{
+				Music.play();
+				$('#Music').attr('isPause',0)
+				$('.Music_Switch span').removeClass('pause').addClass('running');
+			}
+			
+		})
 
     };
 
