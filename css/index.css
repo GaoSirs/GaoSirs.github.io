@@ -31,6 +31,8 @@ a{
 .active{
 	color: #04d194!important;
 }
+
+/***************** Loading *****************/
 .loading{
 	position: fixed;
 	top: 0;
@@ -38,7 +40,6 @@ a{
 	right: 0;
 	bottom: 0;
 	background-color: #85b0a6;
-	/*background-color: #2b2c30; */
 	z-index: 999;
 }
 .loading img{
@@ -49,6 +50,8 @@ a{
 	bottom: 0;
 	margin: auto;
 }
+
+/********************* 分页 *********************/
 .swiper-pagination{
 	width: 28px;
 	text-align: center;
@@ -74,6 +77,8 @@ a{
 	width: 10px!important;
 	height: 10px!important;
 }
+
+/************** header ***************/
 header{
 	position: fixed;
 	left: 0;
@@ -139,7 +144,6 @@ header{
 	color: #04d194!important;
 }
 
-
 .header_Bar{
 	height: 60px;
 	background-color: transparent;
@@ -167,9 +171,10 @@ header{
     align-items: center;
 }
 
+
+/************* slide_F1 **************/
 .slide_F1 {
 	position:relative;
-    /*background: url('../images/1.jpg') no-repeat center ;*/
 }
 .introduce{
 	
@@ -177,7 +182,6 @@ header{
 .Header_Img{
 	width: 100px;
 	height: 100px;
-	/*border:1px solid #04d194;*/
 	border:1px solid #000;
 	border-radius: 50%;
 	margin: 0 auto;
@@ -185,6 +189,11 @@ header{
 .Header_Img img{
 	width: 100%;
 	border-radius: 50%;
+	transition:all 0.5s;
+	cursor: pointer;
+}
+.Header_Img img:hover{
+	box-shadow: 0 0 30px rgba(4,201,142,1);
 }
 .decribe_txt{
 	color: #FFF;
@@ -220,9 +229,11 @@ header{
 .introduce_p4{
 	color: #109085;
 }
+
+
+/***************** slide_F2 *****************/
 .slide_F2 {
     background: url('../images/1.png') #109085;
-    /*background: #109085;*/
 }
 .F2_wrapper{
 	width: 900px;
@@ -260,9 +271,10 @@ header{
 	margin: 24px 0;
 }
 
+
+/*************  slide_F3**************/
 .slide_F3 {
 	background: url('../images/1.png') #FFF ;
-    /*background: #945c4c;*/
 }
 .F3_wrapper{
 	width: 900px;
@@ -293,6 +305,9 @@ header{
 .Skills_list p img{
 	width: 50%;
 }
+.Skills_list .Grunt_Logo{
+	width: 42%;
+}
 .Skills_list p:nth-child(3){
 	color: #ff6700;
 }
@@ -313,6 +328,9 @@ header{
     border-radius: 10px;
     transition:all 0.5s;
 }
+
+
+/**************** slide_F4 *****************/
 .slide_F4 {
     background:url('../images/1.png') #945c4c;
 }
@@ -321,7 +339,6 @@ header{
 	min-height:300px; 
 	border-radius: 10px;
 	background: #FFF;
-	/*opacity: 0.5;*/
 	box-shadow: 0 0 25px rgba(0,0,0,.5);
 }
 .slide_pagination{
@@ -394,9 +411,10 @@ header{
 	
 }
 
+
+/***************** slide_F5 ***************/
 .slide_F5 {
     background:url('../images/1.png') #4b85a0;
-    /*padding-top: 30px;*/
 }
 .F5_wrapper{
 	width: 1100px;
@@ -461,6 +479,9 @@ header{
 	background:#E6E6E6 ;
 	color: #666;
 }
+
+
+/************** slide_F6 **************/
 .slide_F6 {
     background:url('../images/1.png') #a29971;
 
