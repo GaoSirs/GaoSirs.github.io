@@ -12,7 +12,7 @@ $(function() {
 
         InitSwiper();
 
-        // DisabledKey(); // 禁止查看源码
+        DisabledKey(); // 禁止查看源码
         
         LoadCanvas(); // 加载 Canvas
 
