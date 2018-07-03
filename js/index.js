@@ -5,7 +5,7 @@ $(function() {
 
     /**
      * 初始化函数
-     * 
+     *
      */
 
     function init() {
@@ -13,7 +13,7 @@ $(function() {
         InitSwiper();
 
         DisabledKey(); // 禁止查看源码
-        
+
         LoadCanvas(); // 加载 Canvas
 
         Events(); // 事件函数
@@ -32,9 +32,9 @@ $(function() {
             mousewheelControl: true,
             speed: 1000,
             onInit: function(swiper){
-			    swiperAnimateCache(swiper); 
-			    swiperAnimate(swiper); 
-			}, 
+			    swiperAnimateCache(swiper);
+			    swiperAnimate(swiper);
+			},
             onSlideChangeStart: function(swiper) {
                 if (swiper.activeIndex != 0) {
                     $('header').css({ 'color': '#000', 'background': '#FFF', 'border-bottom': '1px solid #DDD' })
@@ -53,9 +53,9 @@ $(function() {
                 }
                 $('.nav_item').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
             },
-			onSlideChangeEnd: function(swiper){ 
-				swiperAnimate(swiper); 
-			} 
+			onSlideChangeEnd: function(swiper){
+				swiperAnimate(swiper);
+			}
         });
 
         ExperSwiper = new Swiper('.experience_slider',{
@@ -258,7 +258,7 @@ $(function() {
 				$('#Music').attr('isPause',0)
 				$('.Music_Switch span').removeClass('pause').addClass('running');
 			}
-			
+
 		})
 
     };
@@ -267,26 +267,26 @@ $(function() {
    	 * 禁止查看源码
    	 */
     function DisabledKey() {
-	    document.onkeydown = function() {  
-	        var e = window.event || arguments[0];  
-	        //屏蔽F12  
-	        if(e.keyCode == 123) {  
-	            return false;  
-	            //屏蔽Ctrl+Shift+I  
-	        } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {  
-	            return false;  
-	            //屏蔽Shift+F10  
-	        } else if((e.shiftKey) && (e.keyCode == 121)){  
-	            return false;  
+	    document.onkeydown = function() {
+	        var e = window.event || arguments[0];
+	        //屏蔽F12
+	        if(e.keyCode == 123) {
+	            return false;
+	            //屏蔽Ctrl+Shift+I
+	        } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+	            return false;
+	            //屏蔽Shift+F10
+	        } else if((e.shiftKey) && (e.keyCode == 121)){
+	            return false;
 	        } else if((e.ctrlKey) && (e.keyCode == 83)){
 	        	return false;
 	        }
 	    };
 
-	    //屏蔽右键单击  
-	    document.oncontextmenu = function() {  
-	        return false;  
-	    }  
+	    //屏蔽右键单击
+	    document.oncontextmenu = function() {
+	        return false;
+	    }
     };
 
 

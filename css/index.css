@@ -8,12 +8,12 @@ body {
     position: relative;
     height: 100%;
     font-family: "微软雅黑","HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial","sans-serif";
-    moz-user-select: -moz-none; 
-	-moz-user-select: none; 
-	-o-user-select:none; 
-	-khtml-user-select:none; 
-	-webkit-user-select:none; 
-	-ms-user-select:none; 
+    moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
 	user-select:none;
 }
 ul,li{
@@ -99,7 +99,7 @@ header{
 	overflow: hidden;
 }
 .header_left{
-	
+
 }
 .header_left h1{
 	font-size: 18px;
@@ -107,7 +107,7 @@ header{
 	cursor: pointer;
 }
 .header_right{
-	
+
 }
 .nav{
 	overflow: hidden;
@@ -128,7 +128,7 @@ header{
 	-o-transition:color 1s; /* Opera */
 }
 .nav_item a{
-	
+
 }
 .nav_item span{
 	position: absolute;
@@ -177,7 +177,7 @@ header{
 	position:relative;
 }
 .introduce{
-	
+
 }
 .Header_Img{
 	width: 100px;
@@ -261,7 +261,7 @@ header{
 	cursor: pointer;
 }
 .F2_Navitem li p:first-child i{
-	font-size: 40px;	
+	font-size: 40px;
 }
 .F2_Describe{
 	padding-top: 50px;
@@ -280,7 +280,7 @@ header{
 	width: 900px;
 }
 .Skills{
-	
+
 }
 .Skills_list{
 	float: left;
@@ -300,7 +300,7 @@ header{
 	background-color: rgba(0,0,0,0.8);
 }
 .Skills_list p{
-	
+
 }
 .Skills_list p img{
 	width: 50%;
@@ -336,7 +336,7 @@ header{
 }
 .F4_wrapper{
 	width: 850px;
-	min-height:300px; 
+	min-height:300px;
 	border-radius: 10px;
 	background: #FFF;
 	box-shadow: 0 0 25px rgba(0,0,0,.5);
@@ -405,10 +405,10 @@ header{
     background-color: #945c4c;
 }
 .experience_list1{
-	
+
 }
 .experience_list2{
-	
+
 }
 
 
