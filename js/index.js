@@ -12,7 +12,7 @@ $(function() {
 
         InitSwiper();
 
-        DisabledKey(); // 禁止查看源码
+        /* DisabledKey(); // 禁止查看源码 */
 
         LoadCanvas(); // 加载 Canvas
 
@@ -53,9 +53,9 @@ $(function() {
                 }
                 $('.nav_item').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
             },
-			onSlideChangeEnd: function(swiper){
-				swiperAnimate(swiper);
-			}
+	    onSlideChangeEnd: function(swiper){
+		swiperAnimate(swiper);
+	    }
         });
 
         ExperSwiper = new Swiper('.experience_slider',{
@@ -64,9 +64,9 @@ $(function() {
             paginationClickable: true,
             speed: 500,
             effect : 'fade',
-			fade: {
-			  crossFade: false,
-			}
+	    fade: {
+		crossFade: false,
+	    }
         })
     }
 
