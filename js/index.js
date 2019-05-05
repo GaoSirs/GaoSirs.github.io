@@ -1,80 +1,102 @@
-$(function() {
+$(function () {
 
-    var mySwiper;
-    var ExperSwiper;
+    var oSwiper = null;
+    var oExperSwiper = null;
 
     /**
      * 初始化函数
      *
      */
 
-    function init() {
+    function fnInit() {
 
-        InitSwiper();
+        fnInitSwiper();
 
-        /* DisabledKey(); // 禁止查看源码 */
+        /* fnDisabledKey(); // 禁止查看源码 */
 
-        LoadCanvas(); // 加载 Canvas
+        fnLoadCanvas(); // 加载 Canvas
 
-        Events(); // 事件函数
+        fnEvents(); // 事件函数
 
     }
 
     /**
      * 初始化swiper
      */
-    function InitSwiper() {
-        mySwiper = new Swiper('.swiper-container', {
+    function fnInitSwiper() {
+        oSwiper = new Swiper('.swiper-container', {
             pagination: '.swiper_pagination',
             direction: 'vertical',
             slidesPerView: 1,
             paginationClickable: true,
             mousewheelControl: true,
             speed: 1000,
-            onInit: function(swiper){
-			    swiperAnimateCache(swiper);
-			    swiperAnimate(swiper);
-			},
-            onSlideChangeStart: function(swiper) {
+            onInit: function (swiper) {
+                swiperAnimateCache(swiper);
+                swiperAnimate(swiper);
+            },
+            onSlideChangeStart: function (swiper) {
                 if (swiper.activeIndex != 0) {
-                    $('header').css({ 'color': '#000', 'background': '#FFF', 'border-bottom': '1px solid #DDD' })
-                    $('.nav_item').css({ 'color': '#000' })
-                    if(swiper.activeIndex == 2){
-                    	$('.swiper-pagination-bullet').css({'background':'#333'});
-                    	$('.swiper-pagination-bullet-active').css({'background':'#333'});
-                    }else{
-                    	$('.swiper-pagination-bullet').css({'background':'#FFF'});
-                    	$('.swiper-pagination-bullet-active').css({'background':'#FFF'});
+                    $('header').css({
+                        'color': '#000',
+                        'background': '#FFF',
+                        'border-bottom': '1px solid #DDD'
+                    })
+                    $('.nav_item').css({
+                        'color': '#000'
+                    })
+                    if (swiper.activeIndex == 2) {
+                        $('.swiper-pagination-bullet').css({
+                            'background': '#333'
+                        });
+                        $('.swiper-pagination-bullet-active').css({
+                            'background': '#333'
+                        });
+                    } else {
+                        $('.swiper-pagination-bullet').css({
+                            'background': '#FFF'
+                        });
+                        $('.swiper-pagination-bullet-active').css({
+                            'background': '#FFF'
+                        });
                     }
                 } else {
-                    $('header').css({ 'color': '#FFF', 'background': 'transparent', 'border-bottom': '0' })
-                    $('.nav_item').css({ 'color': '#FFF' })
-                    $('.swiper-pagination-bullet,.swiper-pagination-bullet-active').css({'background':'#FFF'});
+                    $('header').css({
+                        'color': '#FFF',
+                        'background': 'transparent',
+                        'border-bottom': '0'
+                    })
+                    $('.nav_item').css({
+                        'color': '#FFF'
+                    })
+                    $('.swiper-pagination-bullet,.swiper-pagination-bullet-active').css({
+                        'background': '#FFF'
+                    });
                 }
                 $('.nav_item').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
             },
-	    onSlideChangeEnd: function(swiper){
-		swiperAnimate(swiper);
-	    }
+            onSlideChangeEnd: function (swiper) {
+                swiperAnimate(swiper);
+            }
         });
 
-        ExperSwiper = new Swiper('.experience_slider',{
-        	pagination: '.slide_pagination',
+        oExperSwiper = new Swiper('.experience_slider', {
+            pagination: '.slide_pagination',
             slidesPerView: 1,
             paginationClickable: true,
             speed: 500,
-            effect : 'fade',
-	    fade: {
-		crossFade: false,
-	    }
+            effect: 'fade',
+            fade: {
+                crossFade: false,
+            }
         })
     }
 
     /**
      * 加载canvas
      */
-    function LoadCanvas(){
-    	var canvas3 = document.querySelector('#canvas3');
+    function fnLoadCanvas() {
+        var canvas3 = document.querySelector('#canvas3');
         ctx = canvas3.getContext('2d');
         canvas3.width = window.innerWidth;
         canvas3.height = window.innerHeight;
@@ -137,7 +159,7 @@ $(function() {
         }
 
         Dot.prototype = {
-            draw: function() {
+            draw: function () {
                 ctx.beginPath();
                 ctx.fillStyle = this.color.style;
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -204,12 +226,12 @@ $(function() {
             requestAnimationFrame(animateDots);
         }
 
-        $('#canvas3').on('mousemove', function(e) {
+        $('#canvas3').on('mousemove', function (e) {
             mousePosition.x = e.pageX;
             mousePosition.y = e.pageY;
         });
 
-        $('#canvas3').on('mouseleave', function(e) {
+        $('#canvas3').on('mouseleave', function (e) {
             mousePosition.x = canvas3.width / 2;
             mousePosition.y = canvas3.height / 2;
         });
@@ -221,76 +243,76 @@ $(function() {
     /**
      * 事件函数
      */
-    function Events() {
+    function fnEvents() {
         // 导航
-        $('.header_left h1').on('click',function(){
-        	mySwiper.slideTo(0, 1000, true);
+        $('.header_left h1').on('click', function () {
+            oSwiper.slideTo(0, 1000, true);
         })
-        $('.nav_item').hover(function() {
+        $('.nav_item').hover(function () {
             $(this).find('span').css('width', '100%');
-        }, function() {
+        }, function () {
             $(this).find('span').css('width', '0');
         })
 
-        $('.nav_item').click(function() {
+        $('.nav_item').click(function () {
             $(this).addClass('active').siblings().removeClass('active');
             let index = $(this).index();
-            mySwiper.slideTo(index, 1000, true);
+            oSwiper.slideTo(index, 1000, true);
         })
 
 
         // 分頁條
-        $('.swiper_pagination .swiper-pagination-bullet').on('click', function() {
+        $('.swiper_pagination .swiper-pagination-bullet').on('click', function () {
             let index = $(this).index()
             $('.nav_item').eq(index).addClass('active').siblings().removeClass('active');
         })
 
         // 音乐
-        $('.Music_Switch').on('click',function(){
-			let IsPause = $('#Music').attr('isPause');
-			let Music = document.getElementById('Music');
-			if(IsPause == 0){
-				Music.pause();
-				$('#Music').attr('isPause',1)
-				$('.Music_Switch span').removeClass('running').addClass('pause');
-			}else{
-				Music.play();
-				$('#Music').attr('isPause',0)
-				$('.Music_Switch span').removeClass('pause').addClass('running');
-			}
+        $('.Music_Switch').on('click', function () {
+            let IsPause = $('#Music').attr('isPause');
+            let Music = document.getElementById('Music');
+            if (IsPause == 0) {
+                Music.pause();
+                $('#Music').attr('isPause', 1)
+                $('.Music_Switch span').removeClass('running').addClass('pause');
+            } else {
+                Music.play();
+                $('#Music').attr('isPause', 0)
+                $('.Music_Switch span').removeClass('pause').addClass('running');
+            }
 
-		})
+        })
 
     };
 
-   	/**
-   	 * 禁止查看源码
-   	 */
-    function DisabledKey() {
-	    document.onkeydown = function() {
-	        var e = window.event || arguments[0];
-	        //屏蔽F12
-	        if(e.keyCode == 123) {
-	            return false;
-	            //屏蔽Ctrl+Shift+I
-	        } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-	            return false;
-	            //屏蔽Shift+F10
-	        } else if((e.shiftKey) && (e.keyCode == 121)){
-	            return false;
-	        } else if((e.ctrlKey) && (e.keyCode == 83)){
-	        	return false;
-	        }
-	    };
+    /**
+     * 禁止查看源码
+     */
+    function fnDisabledKey() {
+        document.onkeydown = function () {
+            var e = window.event || arguments[0];
+            //屏蔽F12
+            if (e.keyCode == 123) {
+                return false;
+                //屏蔽Ctrl+Shift+I
+            } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+                return false;
+                //屏蔽Shift+F10
+            } else if ((e.shiftKey) && (e.keyCode == 121)) {
+                return false;
+            } else if ((e.ctrlKey) && (e.keyCode == 83)) {
+                return false;
+            }
+        };
 
-	    //屏蔽右键单击
-	    document.oncontextmenu = function() {
-	        return false;
-	    }
+        //屏蔽右键单击
+        document.oncontextmenu = function () {
+            return false;
+        }
     };
 
 
     // 初始化
-    init();
+    fnInit();
 
 })

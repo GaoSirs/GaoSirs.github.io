@@ -98,17 +98,13 @@ header{
 	margin: 0 auto;
 	overflow: hidden;
 }
-.header_left{
 
-}
 .header_left h1{
 	font-size: 18px;
 	line-height: 60px;
 	cursor: pointer;
 }
-.header_right{
 
-}
 .nav{
 	overflow: hidden;
 	margin-top: 12px;
@@ -127,9 +123,7 @@ header{
 	-webkit-transition:color 1s; /* Safari and Chrome */
 	-o-transition:color 1s; /* Opera */
 }
-.nav_item a{
 
-}
 .nav_item span{
 	position: absolute;
 	left: 0;
@@ -176,9 +170,7 @@ header{
 .slide_F1 {
 	position:relative;
 }
-.introduce{
 
-}
 .Header_Img{
 	width: 100px;
 	height: 100px;
@@ -279,9 +271,7 @@ header{
 .F3_wrapper{
 	width: 900px;
 }
-.Skills{
 
-}
 .Skills_list{
 	float: left;
     width: 20%;
@@ -299,9 +289,7 @@ header{
 	opacity: 1;
 	background-color: rgba(0,0,0,0.8);
 }
-.Skills_list p{
 
-}
 .Skills_list p img{
 	width: 50%;
 }
@@ -404,12 +392,6 @@ header{
     border-radius: 50%;
     background-color: #945c4c;
 }
-.experience_list1{
-
-}
-.experience_list2{
-
-}
 
 
 /***************** slide_F5 ***************/
@@ -440,7 +422,7 @@ header{
 	margin-bottom: 20px;
 }
 .Project_List:nth-child(2n){
-	margin-left: 20px;
+	/* margin-left: 20px; */
 }
 .Project_List:nth-child(2n+1){
 	margin-right: 20px;
@@ -486,9 +468,7 @@ header{
     background:url('../images/1.png') #a29971;
 
 }
-.F6_wrapper{
 
-}
 .F6_wrapper h4{
 	font-size: 18px;
 	margin-bottom: 25px;
@@ -504,9 +484,7 @@ header{
     background: url('../images/1.png') #1DC3E1 ;
     position: relative;
 }
-.F7_wrapper{
 
-}
 .F7_wrapper h4{
 	font-size: 18px;
 	margin-bottom: 40px;
