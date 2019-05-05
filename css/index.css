@@ -8,7 +8,6 @@ body {
     position: relative;
     height: 100%;
     font-family: "微软雅黑","HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial","sans-serif";
-    moz-user-select: -moz-none;
 	-moz-user-select: none;
 	-o-user-select:none;
 	-khtml-user-select:none;
@@ -421,9 +420,7 @@ header{
 	text-align: left;
 	margin-bottom: 20px;
 }
-.Project_List:nth-child(2n){
-	/* margin-left: 20px; */
-}
+
 .Project_List:nth-child(2n+1){
 	margin-right: 20px;
 }

@@ -444,11 +444,64 @@
 
 	<script>
 		$(function () {
-			var timer = setTimeout(function () {
-				$(".loading").fadeOut(1000);
-				let Music = document.getElementById("Music");
-				Music.play();
-			}, 1500);
+
+			 // 音频路径
+			var audioUrl = "http://fdfs.xmcdn.com/group39/M0A/0B/D7/wKgJnlph8ICQRl8pAB4oLZUOtho706.mp3";
+
+			/**
+			 * 测试连接是否生效
+			 * @return { Boolean } 连接状态
+			 */
+			function fnNetPing() {
+				$.ajax({
+						type: "GET",
+						url: audioUrl,
+						success: function() {
+							fnLoadAudioSuc();
+						},
+						error: function() {
+							fnLoadAudioErr();
+						}
+				});
+			};
+
+			/**
+			 * 加载音频成功
+			 * @param  { String }   src      音频路径
+			 * @param  { Function } callback 回调函数
+			 */
+			function fnLoadAudioSuc(){
+
+				function fnLoadAudio(src, callback) {
+					var oAudio = new Audio(src);
+					oAudio.src = src;
+					oAudio.onloadedmetadata = callback;
+				};
+
+				fnLoadAudio(audioUrl, function() {
+					$('#Music').attr("src", audioUrl);
+					$(".loading").fadeOut(1000);
+					let Music = document.getElementById('Music');
+					Music.play();
+				});
+			}
+			 
+
+			/**
+			 * 加载音频失败
+			 * @param  { String }   src      音频路径
+			 * @param  { Function } callback 回调函数
+			 */
+			function fnLoadAudioErr(){
+				setTimeout(function(){
+					$(".loading").fadeOut(1000);
+					let Music = document.getElementById('Music');
+					Music.play();
+				},2000);
+			};
+
+			fnNetPing();
+
 		});
 	</script>
 </body>
